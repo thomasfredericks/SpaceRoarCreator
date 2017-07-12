@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.IO;
 
@@ -8,11 +9,17 @@ public class TakeScreenshot : MonoBehaviour
 
     private bool takeHiResShot = false;
 
-    public static string ScreenShotName(int width, int height)
+    public Text textUI;
+
+    public string ScreenShotName(int width, int height)
     {
-        return string.Format("{0}/screen_{1}x{2}_{3}.png",
+        if ( textUI != null ) return string.Format("{0}/{1}_{2}.png",
                              System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop),
-                             width, height,
+                             textUI.text,
+                             System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss"));
+
+        return string.Format("{0}/screen_{1}.png",
+                             System.Environment.GetFolderPath(System.Environment.SpecialFolder.Desktop),
                              System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss"));
     }
 

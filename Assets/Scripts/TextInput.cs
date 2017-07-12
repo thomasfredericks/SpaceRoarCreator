@@ -50,6 +50,7 @@ public class TextInput : MonoBehaviour {
                     char capticalChar = c;
 
                     if (capticalChar > 96) capticalChar = (char)(capticalChar - 32);
+                    //if (capticalChar < 97) capticalChar = (char)(capticalChar + 32);
 
                     if (textLength < DNA_LENGTH)
                     {

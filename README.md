@@ -1,14 +1,13 @@
 # Space Roar Creator
 
-by/PAR
-THOMAS OUELLET FREDERiCKS
+By/Par:
+* THOMAS OUELLET FREDERiCKS
 
-with/avec
-Patrice Fortin
-Romain Tavenard
-Loïc Suty
+With/Avec :
+* Patrice Fortin
+* Romain Tavenard
+* Loïc Suty
 
-This project benefited from the first grant Résidence d'artiste Turbulent-CQAM
-Ce projet a bénéficié de la première bourse Résidence d'artiste Turbulent-CQAM
+This project benefited from the first grant Résidence d'artiste Turbulent-CQAM / Ce projet a bénéficié de la première bourse Résidence d'artiste Turbulent-CQAM
 
-More information : http://tof.t-o-f.info/?/projects/space-roar/
+More information / Plus d'information : http://tof.t-o-f.info/?/projects/space-roar/

@@ -11,6 +11,7 @@ public class TextInput : MonoBehaviour {
     public char emptyCharSymbol = '_';
     int textLength = 0;
     public SpaceShipGeneratorScript spaceShipGeneratorScript;
+    public TofCameraController tofCameraController;
 
     SpaceShip ship;
 
@@ -67,6 +68,9 @@ public class TextInput : MonoBehaviour {
                             }
 
                             ship = spaceShipGeneratorScript.GenerateShip(dna);
+                            tofCameraController.SetOrbitTargetWithInitialDistance(ship.main.transform);
+
+
                            
                         }
                     }

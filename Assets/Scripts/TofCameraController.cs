@@ -16,7 +16,9 @@ public class TofCameraController : MonoBehaviour
 
     public bool autoOrbitDistance = false;
     public float orbitDistance = 30f;
-    
+    float initialOrbitDistance = 30f;
+
+
 
     public float mouseSensitivity = 3f;
     public float keySensitivity = 0.25f;
@@ -129,6 +131,8 @@ public class TofCameraController : MonoBehaviour
     // Use this for initialization
     void Start () {
 
+        initialOrbitDistance = orbitDistance;
+
         fade = new Fade();
 
         if (targetCamera == null) targetCamera = Camera.main;
@@ -239,7 +243,18 @@ public class TofCameraController : MonoBehaviour
 
     }
 
+    public void SetOrbitTargetWithInitialDistance(Transform newTarget)
+    {
+        orbitTarget = newTarget;
+        Vector3 heading = target.transform.position - orbitTarget.position;
+        heading.Normalize();
+        
 
+        heading = heading * initialOrbitDistance;
+
+        target.transform.position = orbitTarget.position + heading;
+        Orbit(0, 0, 0);
+    }
  
 
     public void SetOrbitTarget(Transform newTarget)
